@@ -26,7 +26,7 @@
     "demo": "node bin/cli.js demo",
     "test": "node --test test/*.test.js",
     "test:browser": "node test/browser.mjs",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --config .prettierrc.json --ignore-path .prettierignore --check ."
   },
   "engines": {
     "node": ">=22"
