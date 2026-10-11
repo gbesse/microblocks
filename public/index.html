@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>microblocks</title>
+    <link rel="stylesheet" href="./public/style.css" />
+  </head>
+  <body>
+    <header>
+      <span class="brand">MicroBlocks</span
+      ><label
+        ><span data-key="language"></span
+        ><select id="locale" aria-label="FR / EN / ES">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+        </select></label
+      >
+    </header>
+    <main>
+      <p class="eyebrow" data-key="eyebrow"></p>
+      <h1 data-key="title"></h1>
+      <p class="lede" data-key="intro"></p>
+      <p class="notice" id="notice"></p>
+      <div class="layout">
+        <section class="panel">
+          <h2 data-key="settings"></h2>
+          <form id="form">
+            <div id="fields"></div>
+            <div class="controls">
+              <button type="submit" data-key="run"></button
+              ><button type="button" class="secondary" id="reset" data-key="reset"></button>
+            </div>
+          </form>
+          <details>
+            <summary data-key="inputData"></summary>
+            <label
+              ><span data-key="jsonInput"></span
+              ><textarea id="input" spellcheck="false"></textarea></label
+            ><button id="apply" class="secondary" data-key="apply"></button
+            ><label
+              ><span data-key="upload"></span
+              ><input id="upload" type="file" accept=".json,application/json"
+            /></label>
+            <div id="extra-input"></div>
+          </details>
+          <p id="status" role="status" aria-live="polite"></p>
+        </section>
+        <section class="panel">
+          <h2 data-key="results"></h2>
+          <p id="summary"></p>
+          <div id="metrics" class="metrics"></div>
+          <div id="chart"></div>
+          <div id="legend" class="legend"></div>
+          <div id="table" class="table-wrap"></div>
+          <div id="insights" class="table-wrap"></div>
+          <ul id="findings" class="findings"></ul>
+          <div class="controls">
+            <button id="download" class="secondary" data-key="download"></button
+            ><button id="download-svg" class="secondary" data-key="downloadSvg"></button>
+          </div>
+          <details>
+            <summary data-key="reportData"></summary>
+            <pre id="report"></pre>
+          </details>
+        </section>
+      </div>
+      <section class="panel">
+        <h2 data-key="method"></h2>
+        <p data-key="methodText"></p>
+        <p data-key="next"></p>
+      </section>
+    </main>
+    <footer>
+      <span data-key="footer"></span> · <a href="https://github.com/gbesse/microblocks">GitHub ↗</a>
+    </footer>
+    <script type="module" src="./public/app.js"></script>
+  </body>
+</html>

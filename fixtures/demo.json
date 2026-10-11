@@ -1,0 +1,660 @@
+{
+  "schemaVersion": 1,
+  "origin": "synthetic",
+  "asOf": "2026-10-11T12:00:00Z",
+  "blocks": [
+    {
+      "id": "flexure",
+      "version": "1.0.0",
+      "function": "flexure",
+      "interfaces": [
+        {
+          "id": "port",
+          "domain": "mechanical",
+          "unit": "N/m"
+        }
+      ],
+      "requires": [],
+      "metrics": {
+        "stiffness": {
+          "min": 18,
+          "max": 22,
+          "unit": "N/m"
+        }
+      },
+      "recipes": [
+        {
+          "id": "flexure-recipe",
+          "profileId": "fab-A",
+          "parameters": {
+            "scale": {
+              "min": 0.8,
+              "max": 1.2,
+              "unit": "1"
+            }
+          },
+          "conditions": {
+            "temperature": {
+              "min": 20,
+              "max": 30,
+              "unit": "C"
+            }
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "id": "flexure-measurement",
+          "recipeId": "flexure-recipe",
+          "version": "1.0.0",
+          "origin": "synthetic",
+          "parameters": {
+            "scale": {
+              "value": 1,
+              "unit": "1"
+            }
+          },
+          "conditions": {
+            "temperature": {
+              "value": 25,
+              "unit": "C"
+            }
+          },
+          "metrics": {
+            "stiffness": {
+              "value": 20,
+              "uncertainty95": 0.4,
+              "unit": "N/m"
+            }
+          },
+          "samples": 5,
+          "measuredAt": "2026-10-01T12:00:00Z",
+          "validUntil": "2027-01-01T00:00:00Z",
+          "provenance": {
+            "protocolId": "demo-protocol-1",
+            "instrument": "demo-instrument",
+            "calibrationId": "demo-calibration"
+          },
+          "basis": {
+            "id": "flexure",
+            "version": "1.0.0",
+            "function": "flexure",
+            "interfaces": [
+              {
+                "id": "port",
+                "domain": "mechanical",
+                "unit": "N/m"
+              }
+            ],
+            "requires": [],
+            "metrics": {
+              "stiffness": {
+                "min": 18,
+                "max": 22,
+                "unit": "N/m"
+              }
+            },
+            "design": {
+              "format": "scad",
+              "file": "fixtures/flexure.scad",
+              "units": "mm",
+              "illustrative": true,
+              "sha256": "90aefcb162fd6621744b8c318524698d3451e15d2358db94d74bdc47d4d5f16d"
+            },
+            "recipe": {
+              "id": "flexure-recipe",
+              "profileId": "fab-A",
+              "parameters": {
+                "scale": {
+                  "min": 0.8,
+                  "max": 1.2,
+                  "unit": "1"
+                }
+              },
+              "conditions": {
+                "temperature": {
+                  "min": 20,
+                  "max": 30,
+                  "unit": "C"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "design": {
+        "format": "scad",
+        "file": "fixtures/flexure.scad",
+        "units": "mm",
+        "illustrative": true,
+        "sha256": "90aefcb162fd6621744b8c318524698d3451e15d2358db94d74bdc47d4d5f16d"
+      }
+    },
+    {
+      "id": "valve",
+      "version": "1.0.0",
+      "function": "valve",
+      "interfaces": [
+        {
+          "id": "port",
+          "domain": "fluidic",
+          "unit": "uL/min"
+        }
+      ],
+      "requires": [],
+      "metrics": {
+        "flow": {
+          "min": 9,
+          "max": 11,
+          "unit": "uL/min"
+        }
+      },
+      "recipes": [
+        {
+          "id": "valve-recipe",
+          "profileId": "fab-A",
+          "parameters": {
+            "scale": {
+              "min": 0.8,
+              "max": 1.2,
+              "unit": "1"
+            }
+          },
+          "conditions": {
+            "temperature": {
+              "min": 20,
+              "max": 30,
+              "unit": "C"
+            }
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "id": "valve-measurement",
+          "recipeId": "valve-recipe",
+          "version": "1.0.0",
+          "origin": "synthetic",
+          "parameters": {
+            "scale": {
+              "value": 1,
+              "unit": "1"
+            }
+          },
+          "conditions": {
+            "temperature": {
+              "value": 25,
+              "unit": "C"
+            }
+          },
+          "metrics": {
+            "flow": {
+              "value": 10,
+              "uncertainty95": 0.2,
+              "unit": "uL/min"
+            }
+          },
+          "samples": 5,
+          "measuredAt": "2026-10-01T12:00:00Z",
+          "validUntil": "2027-01-01T00:00:00Z",
+          "provenance": {
+            "protocolId": "demo-protocol-1",
+            "instrument": "demo-instrument",
+            "calibrationId": "demo-calibration"
+          },
+          "basis": {
+            "id": "valve",
+            "version": "1.0.0",
+            "function": "valve",
+            "interfaces": [
+              {
+                "id": "port",
+                "domain": "fluidic",
+                "unit": "uL/min"
+              }
+            ],
+            "requires": [],
+            "metrics": {
+              "flow": {
+                "min": 9,
+                "max": 11,
+                "unit": "uL/min"
+              }
+            },
+            "design": {
+              "format": "scad",
+              "file": "fixtures/valve.scad",
+              "units": "mm",
+              "illustrative": true,
+              "sha256": "746b82b4ae73d05baec31669d4aa60226790ed8e70accbed0c8889eb23e1a52b"
+            },
+            "recipe": {
+              "id": "valve-recipe",
+              "profileId": "fab-A",
+              "parameters": {
+                "scale": {
+                  "min": 0.8,
+                  "max": 1.2,
+                  "unit": "1"
+                }
+              },
+              "conditions": {
+                "temperature": {
+                  "min": 20,
+                  "max": 30,
+                  "unit": "C"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "design": {
+        "format": "scad",
+        "file": "fixtures/valve.scad",
+        "units": "mm",
+        "illustrative": true,
+        "sha256": "746b82b4ae73d05baec31669d4aa60226790ed8e70accbed0c8889eb23e1a52b"
+      }
+    },
+    {
+      "id": "mixer",
+      "version": "1.0.0",
+      "function": "mixer",
+      "interfaces": [
+        {
+          "id": "port",
+          "domain": "fluidic",
+          "unit": "1"
+        }
+      ],
+      "requires": [],
+      "metrics": {
+        "mixing-index": {
+          "min": 0.85,
+          "max": 1,
+          "unit": "1"
+        }
+      },
+      "recipes": [
+        {
+          "id": "mixer-recipe",
+          "profileId": "fab-A",
+          "parameters": {
+            "scale": {
+              "min": 0.8,
+              "max": 1.2,
+              "unit": "1"
+            }
+          },
+          "conditions": {
+            "temperature": {
+              "min": 20,
+              "max": 30,
+              "unit": "C"
+            }
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "id": "mixer-measurement",
+          "recipeId": "mixer-recipe",
+          "version": "1.0.0",
+          "origin": "synthetic",
+          "parameters": {
+            "scale": {
+              "value": 1,
+              "unit": "1"
+            }
+          },
+          "conditions": {
+            "temperature": {
+              "value": 25,
+              "unit": "C"
+            }
+          },
+          "metrics": {
+            "mixing-index": {
+              "value": 0.92,
+              "uncertainty95": 0.015000000000000003,
+              "unit": "1"
+            }
+          },
+          "samples": 5,
+          "measuredAt": "2026-10-01T12:00:00Z",
+          "validUntil": "2027-01-01T00:00:00Z",
+          "provenance": {
+            "protocolId": "demo-protocol-1",
+            "instrument": "demo-instrument",
+            "calibrationId": "demo-calibration"
+          },
+          "basis": {
+            "id": "mixer",
+            "version": "1.0.0",
+            "function": "mixer",
+            "interfaces": [
+              {
+                "id": "port",
+                "domain": "fluidic",
+                "unit": "1"
+              }
+            ],
+            "requires": [],
+            "metrics": {
+              "mixing-index": {
+                "min": 0.85,
+                "max": 1,
+                "unit": "1"
+              }
+            },
+            "design": {
+              "format": "scad",
+              "file": "fixtures/mixer.scad",
+              "units": "mm",
+              "illustrative": true,
+              "sha256": "db96df5501fc8f21f87caa24be33cfff53d7e7c578c5339480a3ca42acfff1ce"
+            },
+            "recipe": {
+              "id": "mixer-recipe",
+              "profileId": "fab-A",
+              "parameters": {
+                "scale": {
+                  "min": 0.8,
+                  "max": 1.2,
+                  "unit": "1"
+                }
+              },
+              "conditions": {
+                "temperature": {
+                  "min": 20,
+                  "max": 30,
+                  "unit": "C"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "design": {
+        "format": "scad",
+        "file": "fixtures/mixer.scad",
+        "units": "mm",
+        "illustrative": true,
+        "sha256": "db96df5501fc8f21f87caa24be33cfff53d7e7c578c5339480a3ca42acfff1ce"
+      }
+    },
+    {
+      "id": "thermal-channel",
+      "version": "1.0.0",
+      "function": "thermal-channel",
+      "interfaces": [
+        {
+          "id": "port",
+          "domain": "thermal",
+          "unit": "K/W"
+        }
+      ],
+      "requires": [],
+      "metrics": {
+        "resistance": {
+          "min": 0.1,
+          "max": 0.3,
+          "unit": "K/W"
+        }
+      },
+      "recipes": [
+        {
+          "id": "thermal-channel-recipe",
+          "profileId": "fab-A",
+          "parameters": {
+            "scale": {
+              "min": 0.8,
+              "max": 1.2,
+              "unit": "1"
+            }
+          },
+          "conditions": {
+            "temperature": {
+              "min": 20,
+              "max": 30,
+              "unit": "C"
+            }
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "id": "thermal-channel-measurement",
+          "recipeId": "thermal-channel-recipe",
+          "version": "1.0.0",
+          "origin": "synthetic",
+          "parameters": {
+            "scale": {
+              "value": 1,
+              "unit": "1"
+            }
+          },
+          "conditions": {
+            "temperature": {
+              "value": 25,
+              "unit": "C"
+            }
+          },
+          "metrics": {
+            "resistance": {
+              "value": 0.2,
+              "uncertainty95": 0.02,
+              "unit": "K/W"
+            }
+          },
+          "samples": 5,
+          "measuredAt": "2026-10-01T12:00:00Z",
+          "validUntil": "2027-01-01T00:00:00Z",
+          "provenance": {
+            "protocolId": "demo-protocol-1",
+            "instrument": "demo-instrument",
+            "calibrationId": "demo-calibration"
+          },
+          "basis": {
+            "id": "thermal-channel",
+            "version": "1.0.0",
+            "function": "thermal-channel",
+            "interfaces": [
+              {
+                "id": "port",
+                "domain": "thermal",
+                "unit": "K/W"
+              }
+            ],
+            "requires": [],
+            "metrics": {
+              "resistance": {
+                "min": 0.1,
+                "max": 0.3,
+                "unit": "K/W"
+              }
+            },
+            "design": {
+              "format": "scad",
+              "file": "fixtures/thermal-channel.scad",
+              "units": "mm",
+              "illustrative": true,
+              "sha256": "ced5cd412fcd7d0e9bcbabe067ea4cd0b676f6f13e00dd6a4a3f8572fdbf029a"
+            },
+            "recipe": {
+              "id": "thermal-channel-recipe",
+              "profileId": "fab-A",
+              "parameters": {
+                "scale": {
+                  "min": 0.8,
+                  "max": 1.2,
+                  "unit": "1"
+                }
+              },
+              "conditions": {
+                "temperature": {
+                  "min": 20,
+                  "max": 30,
+                  "unit": "C"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "design": {
+        "format": "scad",
+        "file": "fixtures/thermal-channel.scad",
+        "units": "mm",
+        "illustrative": true,
+        "sha256": "ced5cd412fcd7d0e9bcbabe067ea4cd0b676f6f13e00dd6a4a3f8572fdbf029a"
+      }
+    },
+    {
+      "id": "contact",
+      "version": "1.0.0",
+      "function": "contact",
+      "interfaces": [
+        {
+          "id": "port",
+          "domain": "electrical",
+          "unit": "ohm"
+        }
+      ],
+      "requires": [],
+      "metrics": {
+        "resistance": {
+          "min": 0.001,
+          "max": 0.003,
+          "unit": "ohm"
+        }
+      },
+      "recipes": [
+        {
+          "id": "contact-recipe",
+          "profileId": "fab-A",
+          "parameters": {
+            "scale": {
+              "min": 0.8,
+              "max": 1.2,
+              "unit": "1"
+            }
+          },
+          "conditions": {
+            "temperature": {
+              "min": 20,
+              "max": 30,
+              "unit": "C"
+            }
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "id": "contact-measurement",
+          "recipeId": "contact-recipe",
+          "version": "1.0.0",
+          "origin": "synthetic",
+          "parameters": {
+            "scale": {
+              "value": 1,
+              "unit": "1"
+            }
+          },
+          "conditions": {
+            "temperature": {
+              "value": 25,
+              "unit": "C"
+            }
+          },
+          "metrics": {
+            "resistance": {
+              "value": 0.002,
+              "uncertainty95": 0.0002,
+              "unit": "ohm"
+            }
+          },
+          "samples": 5,
+          "measuredAt": "2026-10-01T12:00:00Z",
+          "validUntil": "2027-01-01T00:00:00Z",
+          "provenance": {
+            "protocolId": "demo-protocol-1",
+            "instrument": "demo-instrument",
+            "calibrationId": "demo-calibration"
+          },
+          "basis": {
+            "id": "contact",
+            "version": "1.0.0",
+            "function": "contact",
+            "interfaces": [
+              {
+                "id": "port",
+                "domain": "electrical",
+                "unit": "ohm"
+              }
+            ],
+            "requires": [],
+            "metrics": {
+              "resistance": {
+                "min": 0.001,
+                "max": 0.003,
+                "unit": "ohm"
+              }
+            },
+            "design": {
+              "format": "scad",
+              "file": "fixtures/contact.scad",
+              "units": "mm",
+              "illustrative": true,
+              "sha256": "05503554f3f6bc646ab2a15372e0361da76d1768a07416fba5646b3cb5beee02"
+            },
+            "recipe": {
+              "id": "contact-recipe",
+              "profileId": "fab-A",
+              "parameters": {
+                "scale": {
+                  "min": 0.8,
+                  "max": 1.2,
+                  "unit": "1"
+                }
+              },
+              "conditions": {
+                "temperature": {
+                  "min": 20,
+                  "max": 30,
+                  "unit": "C"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "design": {
+        "format": "scad",
+        "file": "fixtures/contact.scad",
+        "units": "mm",
+        "illustrative": true,
+        "sha256": "05503554f3f6bc646ab2a15372e0361da76d1768a07416fba5646b3cb5beee02"
+      }
+    }
+  ],
+  "query": {
+    "blockId": "flexure",
+    "version": "1.0.0",
+    "profileId": "fab-A",
+    "minimumSamples": 3,
+    "parameters": {
+      "scale": {
+        "value": 1,
+        "unit": "1"
+      }
+    },
+    "conditions": {
+      "temperature": {
+        "value": 25,
+        "unit": "C"
+      }
+    }
+  }
+}

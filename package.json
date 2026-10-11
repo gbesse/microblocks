@@ -1,0 +1,40 @@
+{
+  "name": "@gbesse/microblocks",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./i18n": "./src/i18n.js"
+  },
+  "bin": {
+    "microblocks": "bin/cli.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "public",
+    "fixtures",
+    "README.md",
+    "README.en.md",
+    "README.es.md",
+    "LICENSE",
+    "docs"
+  ],
+  "scripts": {
+    "start": "node bin/serve.js",
+    "demo": "node bin/cli.js demo",
+    "test": "node --test test/*.test.js",
+    "test:browser": "node test/browser.mjs",
+    "format:check": "prettier --check ."
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "playwright": "1.55.1",
+    "prettier": "3.9.9"
+  },
+  "description": "FR: Explorez cinq blocs synthétiques et vérifiez une requête précise contre recettes, interfaces, versions et résultats documentés. EN: Explore five synthetic blocks and check a precise query against recipes, interfaces, versions and documented results. ES: Explora cinco bloques sintéticos y verifica una consulta precisa contra recetas, interfaces, versiones y resultados documentados."
+}
