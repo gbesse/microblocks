@@ -71,3 +71,7 @@ Pruebas de decisiones y contraejemplos, validación de entrada, códigos de sali
 Alfa independiente bajo MIT, sin afiliación a Atomic Machines. Ejemplos y pruebas de demo sintéticos, sin equipos ni API industrial conectados. Repositorio autónomo; no publicado en npm.
 
 [Matter Compiler](https://www.atomicmachines.com/matter-compiler) · [PartCAD](https://github.com/partcad/partcad) · [Bluesky](https://blueskyproject.io/) · [OPC UA Job Management](https://reference.opcfoundation.org/specs/OPC-40001-3/full) · [QIF](https://www.nist.gov/publications/end-end-quality-information-framework-qif-technology-survey)
+
+## API 2026-11-05
+
+API Node `auditDesignDigests(blocks, root)` mediante `@gbesse/microblocks/design-digests` relee archivos SCAD/STEP y verifica SHA-256 declarado. Distingue ausente, diferente y verificado. Solo bytes; geometría y rendimiento físico no validados.
