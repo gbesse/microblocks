@@ -1,11 +1,12 @@
 {
   "name": "@gbesse/microblocks",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "src/index.js",
   "exports": {
     ".": "./src/index.js",
-    "./i18n": "./src/i18n.js"
+    "./i18n": "./src/i18n.js",
+    "./design-digests": "./src/design-digests.js"
   },
   "bin": {
     "microblocks": "bin/cli.js"

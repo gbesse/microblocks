@@ -71,3 +71,7 @@ Decision tests and counterexamples, input validation, exit codes, hashes and no-
 Independent MIT alpha, not affiliated with Atomic Machines. Synthetic demo examples and evidence, no connected equipment or industrial API. Standalone repository; not published on npm.
 
 [Matter Compiler](https://www.atomicmachines.com/matter-compiler) · [PartCAD](https://github.com/partcad/partcad) · [Bluesky](https://blueskyproject.io/) · [OPC UA Job Management](https://reference.opcfoundation.org/specs/OPC-40001-3/full) · [QIF](https://www.nist.gov/publications/end-end-quality-information-framework-qif-technology-survey)
+
+## API 2026-11-05
+
+Node `auditDesignDigests(blocks, root)` via `@gbesse/microblocks/design-digests` rereads SCAD/STEP files and verifies declared SHA-256. Distinguishes missing, mismatch and verified. Byte verification only; geometry and physical performance unvalidated.
