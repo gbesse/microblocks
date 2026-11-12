@@ -75,3 +75,7 @@ Independent MIT alpha, not affiliated with Atomic Machines. Synthetic demo examp
 ## API 2026-11-05
 
 Node `auditDesignDigests(blocks, root)` via `@gbesse/microblocks/design-digests` rereads SCAD/STEP files and verifies declared SHA-256. Distinguishes missing, mismatch and verified. Byte verification only; geometry and physical performance unvalidated.
+
+## 2026-11-12
+
+EN: Link design uses to actual files and detect incompatible digests without validating geometry.
