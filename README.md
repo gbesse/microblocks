@@ -75,3 +75,7 @@ Alpha indépendante sous MIT, non affiliée à Atomic Machines. Exemples et preu
 ## API 2026-11-05
 
 API Node `auditDesignDigests(blocks, root)` via `@gbesse/microblocks/design-digests` : relit les fichiers SCAD/STEP et vérifie leur SHA-256 déclaré. Distingue absent, différent, vérifié. Vérification d’octets seulement ; géométrie et performances physiques non validées.
+
+## 2026-11-12
+
+FR : Relier les usages des designs aux fichiers réels et détecter les empreintes incompatibles sans valider la géométrie.
